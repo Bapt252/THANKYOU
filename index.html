@@ -102,47 +102,45 @@
         }
 
         .logo-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             margin-right: 12px;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3px;
             align-items: center;
             justify-content: center;
             position: relative;
         }
 
-        /* Logo Tenex avec 4 losanges verts - IDENTIQUE à TENEX */
+        /* Logo Tenex CORRECT avec 4 losanges verts visibles - IDENTIQUE à TENEX */
         .logo-icon .diamond {
-            position: absolute;
-            width: 15px;
-            height: 15px;
+            width: 18px;
+            height: 18px;
             background: #1e7e34;
-            border-radius: 3px;
+            border-radius: 4px;
             transform: rotate(45deg);
         }
 
-        .logo-icon .diamond.top {
-            top: 6px;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
+        .logo-icon .diamond:nth-child(1) {
+            justify-self: end;
+            align-self: end;
         }
 
-        .logo-icon .diamond.bottom {
-            bottom: 6px;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
+        .logo-icon .diamond:nth-child(2) {
+            justify-self: start;
+            align-self: end;
         }
 
-        .logo-icon .diamond.left {
-            left: 6px;
-            top: 50%;
-            transform: translateY(-50%) rotate(45deg);
+        .logo-icon .diamond:nth-child(3) {
+            justify-self: end;
+            align-self: start;
         }
 
-        .logo-icon .diamond.right {
-            right: 6px;
-            top: 50%;
-            transform: translateY(-50%) rotate(45deg);
+        .logo-icon .diamond:nth-child(4) {
+            justify-self: start;
+            align-self: start;
         }
 
         h1 {
@@ -421,10 +419,10 @@
         <div class="thank-you-card">
             <div class="logo">
                 <div class="logo-icon">
-                    <div class="diamond top"></div>
-                    <div class="diamond bottom"></div>
-                    <div class="diamond left"></div>
-                    <div class="diamond right"></div>
+                    <div class="diamond"></div>
+                    <div class="diamond"></div>
+                    <div class="diamond"></div>
+                    <div class="diamond"></div>
                 </div>
                 Tenex
             </div>
