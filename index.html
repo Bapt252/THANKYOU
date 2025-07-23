@@ -102,45 +102,51 @@
         }
 
         .logo-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             margin-right: 12px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 3px;
+            position: relative;
+            display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
 
-        /* Logo Tenex CORRECT avec 4 losanges verts visibles - IDENTIQUE à TENEX */
+        /* Logo Tenex EXACT - 4 losanges en croix comme dans l'image - IDENTIQUE À TENEX */
         .logo-icon .diamond {
+            position: absolute;
             width: 18px;
             height: 18px;
             background: #1e7e34;
-            border-radius: 4px;
+            border-radius: 3px;
             transform: rotate(45deg);
         }
 
+        /* Losange du haut */
         .logo-icon .diamond:nth-child(1) {
-            justify-self: end;
-            align-self: end;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
         }
 
+        /* Losange de droite */
         .logo-icon .diamond:nth-child(2) {
-            justify-self: start;
-            align-self: end;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
         }
 
+        /* Losange du bas */
         .logo-icon .diamond:nth-child(3) {
-            justify-self: end;
-            align-self: start;
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
         }
 
+        /* Losange de gauche */
         .logo-icon .diamond:nth-child(4) {
-            justify-self: start;
-            align-self: start;
+            left: 6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
         }
 
         h1 {
@@ -491,7 +497,7 @@
             <div class="security-note">
                 <p>
                     <i class="fas fa-shield-alt"></i>
-                    <strong>Vos données sont sécurisées</strong> - Nous respectons votre vie privée et ne partageons jamais vos informations avec des tiers.
+                    <strong>Vos données sont sécurisées</strong> - Nous respectez votre vie privée et ne partageons jamais vos informations avec des tiers.
                 </p>
             </div>
         </div>
