@@ -111,43 +111,38 @@
             position: relative;
         }
 
-        .logo-icon .diamond1,
-        .logo-icon .diamond2 {
+        /* Logo Tenex avec 4 losanges verts - IDENTIQUE à TENEX */
+        .logo-icon .diamond {
             position: absolute;
             width: 15px;
             height: 15px;
             background: #1e7e34;
             border-radius: 3px;
+            transform: rotate(45deg);
         }
 
-        .logo-icon .diamond1 {
-            top: 15px;
-            left: 0;
+        .logo-icon .diamond.top {
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
         }
 
-        .logo-icon .diamond2 {
-            top: 15px;
-            right: 0;
+        .logo-icon .diamond.bottom {
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
         }
 
-        .logo-icon::before,
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background: #1e7e34;
-            border-radius: 3px;
+        .logo-icon .diamond.left {
+            left: 6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
         }
 
-        .logo-icon::before {
-            top: 0;
-            left: 15px;
-        }
-
-        .logo-icon::after {
-            bottom: 0;
-            left: 15px;
+        .logo-icon .diamond.right {
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
         }
 
         h1 {
@@ -426,8 +421,10 @@
         <div class="thank-you-card">
             <div class="logo">
                 <div class="logo-icon">
-                    <div class="diamond1"></div>
-                    <div class="diamond2"></div>
+                    <div class="diamond top"></div>
+                    <div class="diamond bottom"></div>
+                    <div class="diamond left"></div>
+                    <div class="diamond right"></div>
                 </div>
                 Tenex
             </div>
