@@ -168,7 +168,7 @@
 
         /* Success Header Section */
         .success-header {
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: var(--spacing-2xl);
             animation: headerSlide 0.8s ease-out 0.5s both;
         }
 
@@ -280,7 +280,7 @@
             backdrop-filter: blur(20px);
             border-radius: var(--border-radius-large);
             padding: var(--spacing-xl);
-            margin: var(--spacing-xl) 0;
+            margin: var(--spacing-2xl) 0;
             border: 1px solid rgba(255, 255, 255, 0.2);
             animation: sectionSlide 0.8s ease-out 0.9s both;
             text-align: left;
@@ -372,7 +372,7 @@
 
         .referral-buttons {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: var(--spacing-md);
             margin: var(--spacing-lg) 0;
             position: relative;
@@ -403,6 +403,12 @@
             background: rgba(255, 255, 255, 0.3);
             border-color: rgba(255, 255, 255, 0.5);
             box-shadow: var(--shadow-medium);
+        }
+
+        .referral-btn.copy-link {
+            grid-column: 1 / -1;
+            justify-self: center;
+            max-width: 300px;
         }
 
         .rgpd-note {
@@ -784,10 +790,10 @@
 
                 <h2>Inscription confirmée 🎉</h2>
                 <p class="early-access-text">Vous êtes dans la liste Early Access.</p>
-                <div class="offer-highlight">30 jours de Core offerts</div>
+                <div class="offer-highlight">30 jours d'accès gratuit</div>
                 <p class="early-access-text">vous attendent à l'ouverture.</p>
                 <p class="micro-line">
-                    <em>Offre réservée IDF • fonctions support • 10–500 salariés / –15 % pendant 12 mois si abonnement avant J+30</em>
+                    <em>Offre réservée IDF • fonctions support • –15 % pendant 12 mois si abonnement avant J+30</em>
                 </p>
             </div>
 
@@ -810,7 +816,7 @@
 
             <!-- 3. Parrainage (bloc-clé) -->
             <div class="referral-section">
-                <h3>Parrainez un(e) collègue et <strong>gagnez 1 crédit pour pouvoir faire un recrutement supplémentaire gratuit à votre convenance (valeur 149 €)</strong></h3>
+                <h3>Parrainez un(e) contact et <strong>gagnez 1 crédit pour pouvoir faire un recrutement supplémentaire gratuit (valeur 149 €)</strong></h3>
                 <p>Si votre filleul devient payant, vous recevez un crédit <strong>Pay-Per-Use (149 €)</strong>.</p>
                 
                 <div class="referral-buttons">
@@ -822,14 +828,14 @@
                         <i class="fas fa-envelope"></i>
                         Inviter par email
                     </button>
-                    <button class="referral-btn" onclick="copyLink()">
+                    <button class="referral-btn copy-link" onclick="copyLink()">
                         <i class="fas fa-link"></i>
                         Copier le lien
                     </button>
                 </div>
                 
                 <p class="rgpd-note">
-                    Nous utilisons l'email de votre collègue uniquement pour envoyer votre invitation. Aucune prospection sans consentement.
+                    Nous utilisons l'email de votre contact uniquement pour envoyer votre invitation. Aucune prospection sans consentement.
                 </p>
             </div>
 
@@ -848,7 +854,7 @@
                         <div class="timeline-icon"><i class="fas fa-play"></i></div>
                         <div class="timeline-content">
                             <strong>À l'ouverture</strong>
-                            commencez votre essai 30 jours et profitez de la priorité
+                            commencez votre essai de 30 jours et profitez de la priorité
                         </div>
                     </li>
                     <li>
